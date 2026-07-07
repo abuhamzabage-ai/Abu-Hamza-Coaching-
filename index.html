@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Abu Hamza Coaching | مدرب لياقة بدنية أونلاين في مصر</title>
+
+<!-- SEO -->
+<meta name="description" content="Abu Hamza Coaching - مدرب لياقة بدنية أونلاين. خطط تمرين وتغذية مخصصة، متابعة يومية على الواتساب، باقات Advanced و VIP.">
+<meta name="keywords" content="مدرب لياقة بدنية, كوتش أونلاين, خطة تمرين, خطة غذائية, Abu Hamza Coaching, تدريب اونلاين مصر">
+<meta name="author" content="Abu Hamza Coaching">
+<link rel="canonical" href="https://abuhamzacoaching.com/">
+
+<!-- Open Graph (Facebook/WhatsApp preview) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Abu Hamza Coaching | مدرب لياقة بدنية">
+<meta property="og:description" content="خطط تمرين وتغذية مخصصة، متابعة يومية، باقات Advanced و VIP.">
+<meta property="og:url" content="https://abuhamzacoaching.com/">
+<meta property="og:image" content="/icons/icon-512.png">
+<meta property="og:locale" content="ar_EG">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Abu Hamza Coaching">
+<meta name="twitter:description" content="مدرب لياقة بدنية أونلاين - خطط تمرين وتغذية مخصصة">
+
+<!-- PWA -->
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#0F2747">
+<link rel="apple-touch-icon" href="/icons/icon-192.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Abu Hamza">
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:       #0F2747;
+  --navy-deep:  #091d36;
+  --navy-mid:   #162f52;
+  --navy-light: #1e3d68;
+  --gold:       #D4AF37;
+  --gold-light: #e8c84a;
+  --gold-dim:   rgba(212,175,55,0.12);
+  --gold-border:rgba(212,175,55,0.25);
+  --black:      #111111;
+  --white:      #F8F8F8;
+  --gray:       #8A8A8A;
+  --gray-light: #b0b0b0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--white);
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* ─── NAVBAR ─── */
+nav {
+  position: fixed; top: 0; width: 100%; z-index: 200;
+  background: rgba(9,29,54,0.96);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--gold-border);
+  padding: 0 6%;
+  display: flex; align-items: center; justify-content: space-between;
+  height: 68px;
+}
+.logo {
+  font-size: 22px; font-weight: 900; letter-spacing: 2px;
+  color: var(--white);
+}
+.logo span { color: var(--gold); }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  color: var(--gray-light); text-decoration: none;
+  font-size: 14px; font-weight: 600; transition: color .2s;
+}
+.nav-links a:hover { color: var(--gold); }
+.nav-btn {
+  background: var(--gold); color: var(--black);
+  padding: 9px 22px; border-radius: 6px;
+  font-weight: 800; font-size: 14px; font-family: 'Cairo', sans-serif;
+  text-decoration: none; transition: all .2s; border: none; cursor: pointer;
+  white-space: nowrap;
+}
+.nav-btn:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+/* ─── HERO ─── */
+.hero {
+  min-height: 100vh;
+  background: linear-gradient(160deg, var(--navy-deep) 0%, #0a1a2e 50%, var(--black) 100%);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 110px 6% 70px;
+  position: relative; overflow: hidden;
+}
+.hero-glow {
+  position: absolute; top: 20%; left: 50%; transform: translateX(-50%);
+  width: 700px; height: 400px;
+  background: radial-gradient(ellipse, rgba(212,175,55,0.07) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-lines {
+  position: absolute; inset: 0; opacity: 0.03;
+  background-image: repeating-linear-gradient(0deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 80px),
+                    repeating-linear-gradient(90deg, var(--gold) 0px, var(--gold) 1px, transparent 1px, transparent 80px);
+}
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid var(--gold-border); color: var(--gold);
+  font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase;
+  padding: 7px 20px; border-radius: 30px; margin-bottom: 32px;
+  background: var(--gold-dim);
+}
+.hero h1 {
+  font-size: clamp(38px, 7.5vw, 86px);
+  font-weight: 900; line-height: 1.08;
+  color: var(--white); margin-bottom: 10px;
+}
+.hero h1 .gold { color: var(--gold); }
+.hero h1 .outline {
+  -webkit-text-stroke: 2px var(--gold);
+  color: transparent;
+}
+.hero-sub {
+  color: var(--gray-light); font-size: clamp(15px, 2vw, 20px);
+  max-width: 580px; margin: 0 auto 44px; line-height: 1.7;
+}
+.hero-btns { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--gold); color: var(--black);
+  padding: 15px 36px; border-radius: 8px;
+  font-weight: 800; font-size: 16px; font-family: 'Cairo', sans-serif;
+  text-decoration: none; transition: all .2s; border: none; cursor: pointer;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(212,175,55,0.3); }
+.btn-secondary {
+  border: 1px solid var(--gold-border); color: var(--white);
+  padding: 15px 36px; border-radius: 8px;
+  font-weight: 600; font-size: 16px;
+  text-decoration: none; transition: all .2s; background: transparent;
+}
+.btn-secondary:hover { border-color: var(--gold); color: var(--gold); }
+
+.hero-stats {
+  display: flex; gap: 0; justify-content: center; flex-wrap: wrap;
+  margin-top: 72px; border-top: 1px solid var(--gold-border); padding-top: 52px;
+}
+.stat {
+  padding: 0 48px; text-align: center;
+  border-left: 1px solid var(--gold-border);
+}
+.stat:last-child { border-left: none; }
+.stat-n { font-size: 38px; font-weight: 900; color: var(--gold); display: block; line-height: 1; margin-bottom: 6px; }
+.stat-l { font-size: 13px; color: var(--gray); }
+
+/* ─── SECTIONS ─── */
+section { padding: 96px 6%; }
+.sec-navy { background: var(--navy-deep); }
+.sec-dark { background: #0d0d0d; }
+
+.tag {
+  display: inline-block;
+  font-size: 11px; font-weight: 700; letter-spacing: 4px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 14px;
+}
+.sec-title {
+  font-size: clamp(26px, 4vw, 48px); font-weight: 900; line-height: 1.12;
+  margin-bottom: 16px;
+}
+.sec-title .gold { color: var(--gold); }
+.sec-desc { color: var(--gray-light); font-size: 16px; max-width: 560px; }
+.center { text-align: center; }
+.center .sec-desc { margin: 0 auto; }
+
+/* ─── STEPS ─── */
+.steps {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 0; margin-top: 60px;
+  border: 1px solid var(--gold-border); border-radius: 16px; overflow: hidden;
+}
+.step {
+  padding: 36px 28px; background: var(--navy-mid);
+  border-left: 1px solid var(--gold-border);
+  position: relative; transition: background .2s;
+}
+.step:first-child { border-left: none; }
+.step:hover { background: var(--navy-light); }
+.step-num {
+  font-size: 56px; font-weight: 900; line-height: 1;
+  color: rgba(212,175,55,0.1); margin-bottom: 16px;
+  font-variant-numeric: tabular-nums;
+}
+.step h3 { font-size: 17px; font-weight: 700; margin-bottom: 10px; color: var(--white); }
+.step p { color: var(--gray); font-size: 14px; line-height: 1.65; }
+
+/* ─── FEATURES ─── */
+.feats {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 14px; margin-top: 60px;
+}
+.feat {
+  background: var(--navy-mid); border: 1px solid var(--gold-border);
+  border-radius: 12px; padding: 28px 24px; transition: all .2s;
+}
+.feat:hover { border-color: var(--gold); transform: translateY(-3px); }
+.feat-icon { font-size: 32px; margin-bottom: 14px; }
+.feat h3 { font-size: 16px; font-weight: 700; margin-bottom: 8px; color: var(--white); }
+.feat p { color: var(--gray); font-size: 14px; line-height: 1.6; }
+
+/* ─── PACKAGES ─── */
+.pkgs {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(270px,1fr));
+  gap: 18px; margin-top: 60px; align-items: start;
+}
+.pkg {
+  background: var(--navy-mid);
+  border: 1px solid var(--gold-border);
+  border-radius: 16px; padding: 36px 28px;
+  position: relative; transition: all .2s;
+}
+.pkg:hover { transform: translateY(-4px); border-color: var(--gold); }
+.pkg.vip {
+  background: linear-gradient(160deg, var(--navy-light) 0%, var(--navy-mid) 100%);
+  border-color: var(--gold);
+}
+.pkg-badge {
+  position: absolute; top: -12px; right: 20px;
+  background: var(--gold); color: var(--black);
+  font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase;
+  padding: 4px 16px; border-radius: 20px;
+}
+.vip-badge {
+  position: absolute; top: -12px; right: 20px;
+  background: linear-gradient(90deg, var(--gold), var(--gold-light));
+  color: var(--black);
+  font-size: 11px; font-weight: 800;
+  padding: 4px 16px; border-radius: 20px;
+}
+.pkg-tier {
+  font-size: 11px; font-weight: 800; letter-spacing: 3px; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 6px;
+}
+.pkg-name { font-size: 22px; font-weight: 900; color: var(--white); margin-bottom: 20px; }
+.price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 4px; }
+.price-num { font-size: 46px; font-weight: 900; color: var(--white); line-height: 1; }
+.price-cur { font-size: 16px; color: var(--gray); }
+.price-dur { font-size: 13px; color: var(--gold); font-weight: 600; margin-bottom: 24px; }
+.pkg-list { list-style: none; margin-bottom: 28px; display: flex; flex-direction: column; gap: 10px; }
+.pkg-list li { display: flex; gap: 10px; font-size: 14px; color: var(--gray-light); align-items: flex-start; line-height: 1.5; }
+.pkg-list li::before { content: '✓'; color: var(--gold); font-weight: 800; flex-shrink: 0; }
+.pkg-btn {
+  display: block; text-align: center; text-decoration: none;
+  border: 1px solid var(--gold); color: var(--gold);
+  padding: 13px; border-radius: 8px; font-weight: 700; font-size: 15px;
+  transition: all .2s; font-family: 'Cairo', sans-serif; cursor: pointer;
+  background: transparent; width: 100%;
+}
+.pkg-btn:hover { background: var(--gold); color: var(--black); }
+.pkg.vip .pkg-btn { background: var(--gold); color: var(--black); }
+.pkg.vip .pkg-btn:hover { background: var(--gold-light); }
+
+/* ─── FAQ ─── */
+.faq-wrap { max-width: 740px; margin: 60px auto 0; display: flex; flex-direction: column; gap: 10px; }
+.faq-item { background: var(--navy-mid); border: 1px solid var(--gold-border); border-radius: 10px; overflow: hidden; }
+.faq-q {
+  width: 100%; background: none; border: none;
+  color: var(--white); font-family: 'Cairo', sans-serif;
+  font-size: 15px; font-weight: 700; padding: 20px 24px;
+  text-align: right; cursor: pointer;
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+}
+.faq-q:hover { color: var(--gold); }
+.faq-icon { color: var(--gold); font-size: 22px; font-weight: 300; transition: transform .25s; flex-shrink: 0; }
+.faq-a {
+  display: none; padding: 0 24px 20px;
+  color: var(--gray-light); font-size: 14px; line-height: 1.85;
+  border-top: 1px solid var(--gold-border); padding-top: 16px;
+}
+.faq-item.open .faq-a { display: block; }
+.faq-item.open .faq-icon { transform: rotate(45deg); }
+
+/* ─── PAYMENT ─── */
+.pay-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 18px; margin-top: 56px; }
+.pay-card {
+  background: var(--navy-mid); border: 1px solid var(--gold-border);
+  border-radius: 14px; padding: 30px 26px; text-align: center;
+}
+.pay-icon { font-size: 38px; margin-bottom: 14px; }
+.pay-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 8px; }
+.pay-card p { color: var(--gray); font-size: 14px; margin-bottom: 14px; }
+.pay-num {
+  display: inline-block;
+  background: var(--gold-dim); border: 1px solid var(--gold-border);
+  color: var(--gold); font-size: 18px; font-weight: 800;
+  padding: 8px 20px; border-radius: 8px; letter-spacing: 1px;
+  direction: ltr;
+}
+
+/* ─── CTA BANNER ─── */
+.cta-banner {
+  margin: 0 6% 80px;
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-deep) 100%);
+  border: 1px solid var(--gold);
+  border-radius: 20px; padding: 80px 48px;
+  text-align: center; position: relative; overflow: hidden;
+}
+.cta-banner::before {
+  content: '';
+  position: absolute; top: -30%; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 350px;
+  background: radial-gradient(ellipse, rgba(212,175,55,0.08) 0%, transparent 65%);
+  pointer-events: none;
+}
+.cta-banner h2 { font-size: clamp(24px, 4vw, 46px); font-weight: 900; margin-bottom: 16px; }
+.cta-banner p { color: var(--gray-light); font-size: 17px; margin-bottom: 36px; max-width: 500px; margin-left: auto; margin-right: auto; }
+
+/* ─── FOOTER ─── */
+footer {
+  background: var(--navy-deep);
+  border-top: 1px solid var(--gold-border);
+  padding: 36px 6%; text-align: center;
+}
+.footer-logo { font-size: 20px; font-weight: 900; color: var(--white); margin-bottom: 8px; }
+.footer-logo span { color: var(--gold); }
+footer p { color: var(--gray); font-size: 13px; }
+
+/* ─── SOCIAL MEDIA ─── */
+.social-section {
+  background: var(--navy-deep);
+  border-top: 1px solid var(--gold-border);
+  padding: 64px 6%; text-align: center;
+}
+.social-title { font-size: 22px; font-weight: 800; color: var(--white); margin-bottom: 8px; }
+.social-sub { color: var(--gray); font-size: 14px; margin-bottom: 40px; }
+.social-grid {
+  display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;
+}
+.soc-card {
+  display: flex; flex-direction: column; align-items: center; gap: 10px;
+  text-decoration: none;
+  background: var(--navy-mid); border: 1px solid var(--gold-border);
+  border-radius: 14px; padding: 24px 28px; min-width: 130px;
+  transition: all .2s;
+}
+.soc-card:hover { border-color: var(--gold); transform: translateY(-4px); background: var(--navy-light); }
+.soc-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 24px; }
+.soc-name { font-size: 13px; font-weight: 700; color: var(--white); }
+.soc-handle { font-size: 11px; color: var(--gray); direction: ltr; }
+
+/* ─── WHATSAPP FLOAT ─── */
+.wa-btn {
+  position: fixed; bottom: 28px; left: 28px; z-index: 999;
+  background: #25D366; color: #fff; width: 58px; height: 58px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-size: 28px; text-decoration: none;
+  box-shadow: 0 4px 24px rgba(37,211,102,0.4); transition: transform .2s;
+}
+.wa-btn:hover { transform: scale(1.1); }
+
+/* ─── DIVIDER ─── */
+.gold-line {
+  height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.3; margin: 0;
+}
+
+/* ─── MOBILE ─── */
+@media (max-width: 768px) {
+  .nav-links { display: none; }
+  nav { padding: 0 5%; }
+  section { padding: 72px 5%; }
+  .hero { padding: 100px 5% 60px; }
+  .stat { padding: 0 24px; }
+  .steps { grid-template-columns: 1fr; }
+  .step { border-left: none; border-top: 1px solid var(--gold-border); }
+  .step:first-child { border-top: none; }
+  .cta-banner { padding: 52px 24px; margin: 0 5% 60px; }
+}
+@media (max-width: 480px) {
+  .hero-stats { flex-direction: column; gap: 28px; }
+  .stat { border-left: none; border-bottom: 1px solid var(--gold-border); padding-bottom: 24px; }
+  .stat:last-child { border-bottom: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="logo">ABU <span>HAMZA</span> COACHING</div>
+  <ul class="nav-links">
+    <li><a href="#how">كيف نبدأ</a></li>
+    <li><a href="#packages">الباقات</a></li>
+    <li><a href="#payment">الدفع</a></li>
+    <li><a href="#faq">أسئلة</a></li>
+  </ul>
+  <a class="nav-btn" href="https://wa.me/201201294088" target="_blank">تواصل الآن</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-lines"></div>
+  <div style="position:relative; z-index:1;">
+    <div class="eyebrow">🏋️ مدرب لياقة بدنية متخصص</div>
+    <h1>
+      حوّل جسمك<br>
+      <span class="gold">بخطة</span> مصممة<br>
+      <span class="outline">لك أنت</span>
+    </h1>
+    <p class="hero-sub">
+      خطة تمرين + تغذية + كارديو — مخصصة تماماً لظروفك وهدفك،<br>
+      مع متابعة يومية على الواتساب تضمن لك الاستمرار والنتيجة
+    </p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="document.getElementById('packages').scrollIntoView({behavior:'smooth'})">اشترك دلوقتي</button>
+      <button class="btn-secondary" onclick="document.getElementById('how').scrollIntoView({behavior:'smooth'})">كيف نبدأ؟</button>
+    </div>
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-n">24h</span>
+        <span class="stat-l">استلام VIP</span>
+      </div>
+      <div class="stat">
+        <span class="stat-n">72h</span>
+        <span class="stat-l">استلام Advanced</span>
+      </div>
+      <div class="stat">
+        <span class="stat-n">يومي</span>
+        <span class="stat-l">متابعة واتساب</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- HOW IT WORKS -->
+<section id="how" class="sec-navy">
+  <div class="center">
+    <div class="tag">الخطوات</div>
+    <h2 class="sec-title">كيف تبدأ رحلتك؟</h2>
+    <p class="sec-desc">4 خطوات بسيطة — من اللحظة دي لحد ما تمسك برنامجك الشخصي</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">01</div>
+      <h3>اقرأ التفاصيل</h3>
+      <p>اتعرف على الباقات والمميزات قبل المكالمة عشان نوفر وقتك ونبدأ على طول</p>
+    </div>
+    <div class="step">
+      <div class="step-num">02</div>
+      <h3>اختار باقتك</h3>
+      <p>Advanced لمتابعة شاملة، أو VIP لتجربة أكثر تميزاً مع أولوية في الرد وجلسة خاصة</p>
+    </div>
+    <div class="step">
+      <div class="step-num">03</div>
+      <h3>سدد وتواصل</h3>
+      <p>ابعت قيمة الاشتراك على فودافون كاش وتواصل معايا على الواتساب بإيصال الدفع</p>
+    </div>
+    <div class="step">
+      <div class="step-num">04</div>
+      <h3>استلم وابدأ</h3>
+      <p>بعد مكالمة قصيرة تستلم برنامجك الكامل — والاشتراك بيبدأ من يوم الاستلام</p>
+    </div>
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- FEATURES -->
+<section class="sec-dark">
+  <div class="center">
+    <div class="tag">مميزاتك</div>
+    <h2 class="sec-title">كل اللي هتحصل <span class="gold">عليه</span></h2>
+    <p class="sec-desc">مش بس خطة — نظام متكامل يضمن لك الاستمرارية والنتيجة الحقيقية</p>
+  </div>
+  <div class="feats">
+    <div class="feat">
+      <div class="feat-icon">💬</div>
+      <h3>متابعة يومية على الواتساب</h3>
+      <p>مش هتتحس إنك بتتدرب لوحدك — فيه حد بيتابعك كل يوم ومستعد يرد على أسئلتك</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🏋️</div>
+      <h3>خطة تمرين مخصصة</h3>
+      <p>مصممة حسب احتياجك وظروفك تماماً — سواء جيم أو بيت، مبتدئ أو متقدم</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🥗</div>
+      <h3>خطة غذائية مرنة</h3>
+      <p>مناسبة لقدرتك المادية — مع ملف بدائل الأكل عشان تستمتع وما تتعبش</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🏃</div>
+      <h3>خطة كارديو مخصصة</h3>
+      <p>مش كارديو عشوائي — محسوبة بدقة على حسب هدفك وجسمك وظروفك</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">📊</div>
+      <h3>ملف تسجيل الأوزان</h3>
+      <p>تتابع تطورك بنفسك وتشوف الفرق أسبوع بأسبوع بشكل واضح وممنهج</p>
+    </div>
+    <div class="feat">
+      <div class="feat-icon">🔒</div>
+      <h3>خصوصيتك محفوظة</h3>
+      <p>مش إجباري تشارك تحولك — لو مش عايز هنشوش على وجهك ونخفي هويتك تماماً</p>
+    </div>
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- PACKAGES -->
+<section id="packages" class="sec-navy">
+  <div class="center">
+    <div class="tag">الأسعار</div>
+    <h2 class="sec-title">اختار <span class="gold">باقتك</span></h2>
+    <p class="sec-desc">Advanced للمتابعة اليومية الشاملة — VIP لمن يريد الأفضل والأسرع</p>
+  </div>
+  <div class="pkgs">
+
+    <!-- Advanced 1M -->
+    <div class="pkg">
+      <div class="pkg-tier">Advanced Plan</div>
+      <div class="pkg-name">شهر واحد</div>
+      <div class="price-row">
+        <span class="price-num">500</span>
+        <span class="price-cur">ج.م</span>
+      </div>
+      <div class="price-dur">📅 اشتراك شهر</div>
+      <ul class="pkg-list">
+        <li>متابعة يومية على الواتساب</li>
+        <li>خطة تمرين حسب احتياجك وظروفك</li>
+        <li>خطة غذائية مناسبة لقدرتك المادية</li>
+        <li>خطة كارديو مخصصة</li>
+        <li>ملف تسجيل الأوزان</li>
+        <li>ملف بدائل الأكل</li>
+        <li>استلام البرامج خلال 72 ساعة</li>
+      </ul>
+      <a class="pkg-btn" href="https://wa.me/201201294088?text=عايز%20أشترك%20في%20Advanced%20Plan%20-%20شهر%20-%20500%20ج.م" target="_blank">اشترك دلوقتي</a>
+    </div>
+
+    <!-- Advanced 3M -->
+    <div class="pkg">
+      <div class="pkg-badge">الأوفر</div>
+      <div class="pkg-tier">Advanced Plan</div>
+      <div class="pkg-name">3 شهور</div>
+      <div class="price-row">
+        <span class="price-num">1,200</span>
+        <span class="price-cur">ج.م</span>
+      </div>
+      <div class="price-dur">📅 اشتراك 3 شهور</div>
+      <ul class="pkg-list">
+        <li>متابعة يومية على الواتساب</li>
+        <li>خطة تمرين حسب احتياجك وظروفك</li>
+        <li>خطة غذائية مناسبة لقدرتك المادية</li>
+        <li>خطة كارديو مخصصة</li>
+        <li>ملف تسجيل الأوزان</li>
+        <li>ملف بدائل الأكل</li>
+        <li>استلام البرامج خلال 72 ساعة</li>
+      </ul>
+      <a class="pkg-btn" href="https://wa.me/201201294088?text=عايز%20أشترك%20في%20Advanced%20Plan%20-%203%20شهور%20-%201200%20ج.م" target="_blank">اشترك دلوقتي</a>
+    </div>
+
+    <!-- Advanced 6M -->
+    <div class="pkg">
+      <div class="pkg-tier">Advanced Plan</div>
+      <div class="pkg-name">6 شهور</div>
+      <div class="price-row">
+        <span class="price-num">2,000</span>
+        <span class="price-cur">ج.م</span>
+      </div>
+      <div class="price-dur">📅 اشتراك 6 شهور</div>
+      <ul class="pkg-list">
+        <li>متابعة يومية على الواتساب</li>
+        <li>خطة تمرين حسب احتياجك وظروفك</li>
+        <li>خطة غذائية مناسبة لقدرتك المادية</li>
+        <li>خطة كارديو مخصصة</li>
+        <li>ملف تسجيل الأوزان</li>
+        <li>ملف بدائل الأكل</li>
+        <li>استلام البرامج خلال 72 ساعة</li>
+      </ul>
+      <a class="pkg-btn" href="https://wa.me/201201294088?text=عايز%20أشترك%20في%20Advanced%20Plan%20-%206%20شهور%20-%202000%20ج.م" target="_blank">اشترك دلوقتي</a>
+    </div>
+
+    <!-- VIP -->
+    <div class="pkg vip">
+      <div class="vip-badge">👑 VIP Program</div>
+      <div class="pkg-tier" style="color:#e8c84a;">VIP Program</div>
+      <div class="pkg-name">3 شهور</div>
+      <div class="price-row">
+        <span class="price-num">3,000</span>
+        <span class="price-cur">ج.م</span>
+      </div>
+      <div class="price-dur">📅 اشتراك 3 شهور</div>
+      <ul class="pkg-list">
+        <li>الأولوية في الرد خلال اليوم</li>
+        <li>مكالمة هاتفية وفيديو خلال المدة</li>
+        <li>جلسة تدريبية خاصة في الجيم</li>
+        <li>متابعة يومية على الواتساب</li>
+        <li>خطة تمرين حسب احتياجك وظروفك</li>
+        <li>خطة غذائية مناسبة لقدرتك المادية</li>
+        <li>خطة كارديو مخصصة</li>
+        <li>ملف تسجيل الأوزان وبدائل الأكل</li>
+        <li>استلام البرامج خلال <strong style="color:var(--gold)">24 ساعة فقط</strong></li>
+      </ul>
+      <a class="pkg-btn" href="https://wa.me/201201294088?text=عايز%20أشترك%20في%20VIP%20Program%20-%203000%20ج.م" target="_blank">احجز VIP</a>
+    </div>
+
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- PAYMENT -->
+<section id="payment" class="sec-dark">
+  <div class="center">
+    <div class="tag">طريقة الدفع</div>
+    <h2 class="sec-title">إزاي <span class="gold">تسدد؟</span></h2>
+    <p class="sec-desc">خطوتين بس — ابعت الفلوس وتواصل معايا على الواتساب</p>
+  </div>
+  <div class="pay-grid">
+    <div class="pay-card">
+      <div class="pay-icon">📱</div>
+      <h3>فودافون كاش</h3>
+      <p>حوّل قيمة الاشتراك على الرقم ده</p>
+      <div class="pay-num">01016356592</div>
+    </div>
+    <div class="pay-card">
+      <div class="pay-icon">💬</div>
+      <h3>تواصل على الواتساب</h3>
+      <p>بعد التحويل، ابعتلي الإيصال على الواتساب</p>
+      <div class="pay-num">01201294088</div>
+    </div>
+    <div class="pay-card">
+      <div class="pay-icon">⚡</div>
+      <h3>ابدأ الاشتراك</h3>
+      <p>الاشتراك بيبدأ من وقت استلام برامجك — مش قبله</p>
+      <div class="pay-num" style="font-size:14px; padding: 10px 16px;">من يوم الاستلام</div>
+    </div>
+  </div>
+</section>
+
+<div class="gold-line"></div>
+
+<!-- FAQ -->
+<section class="sec-navy" id="faq">
+  <div class="center">
+    <div class="tag">أسئلة شائعة</div>
+    <h2 class="sec-title">عندك <span class="gold">سؤال؟</span></h2>
+  </div>
+  <div class="faq-wrap">
+    <div class="faq-item">
+      <button class="faq-q" onclick="tog(this)">مين ممكن يشترك؟<span class="faq-icon">+</span></button>
+      <div class="faq-a">أي شخص عايز يحسن لياقته البدنية ويعيش بجسم صحي حياة مريحة — سواء مبتدئ أو عنده خبرة، رجل أو سيدة.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="tog(this)">امتى بستلم البرنامج؟<span class="faq-icon">+</span></button>
+      <div class="faq-a">Advanced: من يوم لـ 3 أيام بحد أقصى بعد المكالمة. VIP: خلال 24 ساعة فقط. الاشتراك بيبدأ من يوم الاستلام مش قبله.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="tog(this)">إيه سياسة الاسترداد؟<span class="faq-icon">+</span></button>
+      <div class="faq-a">ممكن ترجع فلوسك لو لم تستلم البرامج. بعد الاستلام مش ممكن الاسترداد لأن البرنامج اتعمل خصيصاً ليك.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="tog(this)">هل فيه متابعة مستمرة؟<span class="faq-icon">+</span></button>
+      <div class="faq-a">أيوه — فيه فحص يومي وأسبوعي وشهري حسب نوع الباقة. مش هتتحس لوحدك في الرحلة دي.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="tog(this)">هل لازم أشارك تحولي على السوشيال؟<span class="faq-icon">+</span></button>
+      <div class="faq-a">لا إجبار خالص — لو مش عايز تشارك تحولك، أخبرني وهشوش على وجهك وأخفي هويتك تماماً.</div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-q" onclick="tog(this)">إيه الفرق بين Advanced و VIP؟<span class="faq-icon">+</span></button>
+      <div class="faq-a">VIP بيضيف: أولوية في الرد، مكالمة هاتفية وفيديو، جلسة خاصة في الجيم، واستلام أسرع خلال 24 ساعة بدل 72.</div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-banner">
+  <div class="tag" style="margin-bottom:16px;">الخطوة الأولى</div>
+  <h2>مش لازم تكون مستعد 100%<br>ابدأ دلوقتي</h2>
+  <p>الناس اللي انتظرت "الوقت المناسب" لسه بتستنى — اللي اشتركوا بقوا في شكل تاني</p>
+  <a class="btn-primary" href="https://wa.me/201201294088?text=عايز%20أبدأ%20مع%20Abu%20Hamza" target="_blank" style="font-size:17px; padding:16px 44px; display:inline-block;">تواصل على الواتساب الآن</a>
+</div>
+
+<!-- SOCIAL MEDIA -->
+<div class="social-section">
+  <div class="tag" style="margin-bottom:10px;">تابعني</div>
+  <div class="social-title">تابع رحلتك معايا على السوشيال</div>
+  <div class="social-sub">نتائج حقيقية، محتوى يومي، ونصايح مجانية</div>
+  <div class="social-grid">
+
+    <a class="soc-card" href="https://www.facebook.com/share/14bqdHgTaei/" target="_blank">
+      <div class="soc-icon" style="background:#1877F2;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </div>
+      <span class="soc-name">فيسبوك</span>
+      <span class="soc-handle">Abu Hamza</span>
+    </a>
+
+    <a class="soc-card" href="https://www.instagram.com/abu_hamzall?igsh=dXI4MDBjaDR5NnBi" target="_blank">
+      <div class="soc-icon" style="background: linear-gradient(45deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </div>
+      <span class="soc-name">انستغرام</span>
+      <span class="soc-handle">@abu_hamzall</span>
+    </a>
+
+    <a class="soc-card" href="https://www.tiktok.com/@abu_hamza_coaching?_r=1&_t=ZS-97oYJrVLFtI" target="_blank">
+      <div class="soc-icon" style="background:#000; border: 1px solid #333;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.75a4.85 4.85 0 0 1-1.01-.06z"/></svg>
+      </div>
+      <span class="soc-name">تيك توك</span>
+      <span class="soc-handle">@abu_hamza_coaching</span>
+    </a>
+
+    <a class="soc-card" href="https://youtube.com/@abu_hamzalll?si=QIHdaZoYsDPvwSTH" target="_blank">
+      <div class="soc-icon" style="background:#FF0000;">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#FF0000"/></svg>
+      </div>
+      <span class="soc-name">يوتيوب</span>
+      <span class="soc-handle">@abu_hamzalll</span>
+    </a>
+
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">ABU <span>HAMZA</span> COACHING</div>
+  <p style="margin-top:6px;">مدرب لياقة بدنية متخصص</p>
+  <p style="margin-top:16px; font-size:12px;">© 2026 جميع الحقوق محفوظة</p>
+</footer>
+
+<!-- WA Float -->
+<a class="wa-btn" href="https://wa.me/201201294088" target="_blank">💬</a>
+
+<script>
+function tog(btn) {
+  const item = btn.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// PWA: register service worker
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(() => {});
+  });
+}
+
+// Nav active
+const secs = document.querySelectorAll('section[id]');
+window.addEventListener('scroll', () => {
+  const y = window.scrollY + 80;
+  secs.forEach(s => {
+    const a = document.querySelector(`.nav-links a[href="#${s.id}"]`);
+    if (a) a.style.color = (y >= s.offsetTop && y < s.offsetTop + s.offsetHeight) ? 'var(--gold)' : '';
+  });
+});
+</script>
+</body>
+</html>
